@@ -7,7 +7,7 @@
 [![Backend](https://img.shields.io/badge/backend-none-lightgrey.svg)](#)
 
 > 纯前端私有化二维码生成工具，提供两个版本：Vue增强版 / 原生HTML静态版
-> 同品牌另有云端 SaaS 版本（码叮云端服务），QRding 面向内网离线私有化场景
+> 本仓库是开源轻量版；同品牌高端版本为 **码叮 SaaS**（云端服务），QRding 面向内网离线私有化场景
 
 在线使用：[qrding.cn](http://qrding.cn/)　|　简体中文 | [English](#english)
 
