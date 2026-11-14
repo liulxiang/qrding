@@ -1,7 +1,7 @@
 # QRding（扣叮）
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.0.0-brightgreen.svg)](CHANGELOG.MD)
+[![License](https://img.shields.io/github/license/liulxiang/qrding)](LICENSE)
+[![Release](https://img.shields.io/github/v/tag/liulxiang/qrding?label=release)](CHANGELOG.MD)
 [![Docker](https://img.shields.io/badge/docker-ready-2496ED.svg?logo=docker&logoColor=white)](qrding-vue/Dockerfile)
 [![Vue](https://img.shields.io/badge/Vue-3.x-42b883.svg?logo=vue.js&logoColor=white)](qrding-vue)
 [![Backend](https://img.shields.io/badge/backend-none-lightgrey.svg)](#)
@@ -134,8 +134,8 @@ Vue 版保存在浏览器 `localStorage`（最多 20 条），清除浏览器缓
 
 # QRding
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.0.0-brightgreen.svg)](CHANGELOG.MD)
+[![License](https://img.shields.io/github/license/liulxiang/qrding)](LICENSE)
+[![Release](https://img.shields.io/github/v/tag/liulxiang/qrding?label=release)](CHANGELOG.MD)
 [![Docker](https://img.shields.io/badge/docker-ready-2496ED.svg?logo=docker&logoColor=white)](qrding-vue/Dockerfile)
 
 > A pure front-end, self-hosted QR code generator — Vue enhanced edition and a native single-file HTML edition.
