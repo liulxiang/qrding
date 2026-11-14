@@ -64,7 +64,7 @@ docker run -d -p 8080:80 --name qrding qrding-vue:1.0.0
 
 ```bash
 cd qrding-vue
-docker compose up -d
+docker compose up -d                   # 访问 http://localhost:3311
 ```
 
 ## 🌐 QRding-html（原生静态单文件版）
@@ -78,7 +78,7 @@ docker compose up -d
 
 ```bash
 cd QRding-html
-docker compose up -d
+docker compose up -d                   # 访问 http://localhost:3312
 ```
 
 ## 🐳 部署说明

@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  qrding-html:
+    build: .
+    container_name: qrding-html
+    ports:
+      - "3312:80"
+    restart: unless-stopped
