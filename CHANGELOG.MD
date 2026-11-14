@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.3.0] - 2026-11-14
+## [v1.3.0] - 2026-11-15
 ### Changed — 视觉系统对齐「码叮」品牌手册
 - 全站配色改为品牌色板：科技蓝 `#0066FF`（主色）、智能绿 `#00C853`（实时/成功态）、Charcoal `#333333` 系文字
 - 首页与 qrding-vue 换用无衬线字族（Noto Sans SC / PingFang 栈），标题改用紧字距粗体
