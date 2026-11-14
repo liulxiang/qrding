@@ -9,7 +9,7 @@
 > 纯前端私有化二维码生成工具，提供两个版本：Vue增强版 / 原生HTML静态版
 > 同生态配套项目：码叮（云端SaaS版），QRding面向内网离线私有化场景
 
-简体中文 | [English](#english)
+在线使用：[qrding.cn](http://qrding.cn/)　|　简体中文 | [English](#english)
 
 ## 简介
 
