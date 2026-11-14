@@ -7,6 +7,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.3.0] - 2026-11-14
+### Changed — 视觉系统对齐「码叮」品牌手册
+- 全站配色改为品牌色板：科技蓝 `#0066FF`（主色）、智能绿 `#00C853`（实时/成功态）、Charcoal `#333333` 系文字
+- 首页与 qrding-vue 换用无衬线字族（Noto Sans SC / PingFang 栈），标题改用紧字距粗体
+- 顶栏、页脚、OG 分享图统一使用 `logo.png` 品牌图标；favicon 与 Vue 页头图标同步
+- 圆角统一为 8px（Vue 侧 6px），Element Plus 主色改为品牌蓝
+- 二维码默认前景色改为科技蓝，渐变辅色改为深蓝 `#001A66`（保持扫码可读）
+
 ## [v1.2.0] - 2026-11-14
 ### Changed — 品牌统一为「码叮」
 - 首页、README、CHANGELOG、CONTRIBUTING 与 qrding-vue 界面中的「扣叮」全部改为「码叮」，英文名 QRding 不变

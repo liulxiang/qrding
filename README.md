@@ -1,3 +1,5 @@
+<img src="logo.png" alt="码叮 QRding" width="72">
+
 # QRding（码叮）
 
 [![License](https://img.shields.io/github/license/liulxiang/qrding)](LICENSE)
