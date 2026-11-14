@@ -58,6 +58,10 @@ npm run preview    # 本地预览打包结果
 cd qrding-vue
 docker build -t qrding-vue:1.0.0 .
 docker run -d -p 8080:80 --name qrding qrding-vue:1.0.0
+
+# 用 compose 部署时，改了代码要带 --build 才会重新构建镜像
+# （只写 docker compose up -d 会复用旧镜像，页面看起来「没有更新」）
+cd qrding-vue && docker compose up -d --build
 # 浏览器访问 http://localhost:8080
 ```
 
