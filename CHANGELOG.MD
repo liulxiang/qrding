@@ -7,6 +7,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.0] - 2026-11-14
+### Changed — 品牌统一为「码叮」
+- 首页、README、CHANGELOG、CONTRIBUTING 与 qrding-vue 界面中的「扣叮」全部改为「码叮」，英文名 QRding 不变
+- 首页「两个版本」对比表下新嵌入 qrding-vue 的桌面与手机界面截图（webp base64 内联，仍单文件、零外部请求）
+
+### Added — 单文件 HTML 版二维码美化
+- 码点形状（方块/圆角/圆点/菱形）、码眼形状（方块/圆角/圆形）、码点缩放 60%–100%
+- 渐变填充（斜向/纵向/横向/径向）、背景透明、静区 0–8、码眼独立配色
+- 中心 Logo（10%–30% + 白底板）、底部文字（最多 24 字）、1536 尺寸档
+- SVG 导出现在按新形状生成（渐变、透明底码眼 mask 挖孔、Logo 内嵌 image）
+
 ## [v1.1.0] - 2026-11-14
 ### Added — qrding-vue 二维码美化升级
 - 填充：纯色 / 渐变（斜向、纵向、横向、径向四方向），主色+辅色可调

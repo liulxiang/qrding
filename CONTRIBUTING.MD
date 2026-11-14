@@ -1,4 +1,4 @@
-# Contributing to QRding（扣叮）
+# Contributing to QRding（码叮）
 感谢你对 QRding 项目感兴趣！欢迎提交 Issue、PR 来改进项目。
 
 > 项目仓库包含两个独立版本：

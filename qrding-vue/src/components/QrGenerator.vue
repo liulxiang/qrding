@@ -137,7 +137,7 @@
             </div>
             <div class="qp-field">
               <label class="qp-label">公司</label>
-              <el-input v-model="form.vcard.org" placeholder="扣叮科技" />
+              <el-input v-model="form.vcard.org" placeholder="码叮科技" />
             </div>
           </div>
           <div class="qp-row2">
@@ -283,7 +283,7 @@
         </template>
 
         <div class="qp-section">底部文字</div>
-        <el-input v-model="opt.caption" maxlength="24" show-word-limit placeholder="例如：扫码关注扣叮（留空则不显示）" />
+        <el-input v-model="opt.caption" maxlength="24" show-word-limit placeholder="例如：扫码关注码叮（留空则不显示）" />
       </section>
     </main>
 
@@ -1027,7 +1027,7 @@ watch(ready, (v) => {
 
 /* ===== 启动 ===== */
 onMounted(() => {
-  document.title = '扣叮 QRding · 二维码美化'
+  document.title = '码叮 QRding · 二维码美化'
   readTemplates()
   readHistory()
   nextTick(render)

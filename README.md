@@ -1,4 +1,4 @@
-# QRding（扣叮）
+# QRding（码叮）
 
 [![License](https://img.shields.io/github/license/liulxiang/qrding)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/liulxiang/qrding)](CHANGELOG.MD)
@@ -7,13 +7,13 @@
 [![Backend](https://img.shields.io/badge/backend-none-lightgrey.svg)](#)
 
 > 纯前端私有化二维码生成工具，提供两个版本：Vue增强版 / 原生HTML静态版
-> 同生态配套项目：码叮（云端SaaS版），QRding面向内网离线私有化场景
+> 同品牌另有云端 SaaS 版本（码叮云端服务），QRding 面向内网离线私有化场景
 
 在线使用：[qrding.cn](http://qrding.cn/)　|　简体中文 | [English](#english)
 
 ## 简介
 
-QRding（扣叮）是**无后端、无数据库**的纯前端二维码生成工具。
+QRding（码叮）是**无后端、无数据库**的纯前端二维码生成工具。
 二维码内容、渲染计算全部在浏览器本地执行，**不会上传任何内容到远端服务器**，适合企业内网、NAS、离线环境使用。
 
 本仓库提供两套版本，按需选用：
