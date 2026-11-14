@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 中心 Logo（10%–30% + 白底板）、底部文字（最多 24 字）、1536 尺寸档
 - SVG 导出现在按新形状生成（渐变、透明底码眼 mask 挖孔、Logo 内嵌 image）
 
+### Added — 站点与 SEO
+- `robots.txt`：全站允许抓取并声明 sitemap；`sitemap.xml`：https 首页条目
+- `index.html` head 补 canonical、robots、OG 与 Twitter 卡片、JSON-LD（WebSite / WebApplication / Organization）
+- 新增 1200×630 社交分享图 `og.jpg`
+
 ## [v1.1.0] - 2026-11-14
 ### Added — qrding-vue 二维码美化升级
 - 填充：纯色 / 渐变（斜向、纵向、横向、径向四方向），主色+辅色可调
