@@ -340,13 +340,15 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
   .deploy{grid-template-columns:1fr}
   .shots{grid-template-columns:1fr;gap:14px}
   .top nav{gap:16px}
-  .top nav a:nth-child(1),.top nav a:nth-child(2){display:none}
+  .top nav a:nth-child(2),.top nav a:nth-child(3){display:none}
 }
 @media (max-width:560px){
   .actions{grid-template-columns:1fr 1fr}
   .actions .primary{grid-column:1/-1}
   h1{font-size:1.85rem}
   .style-row{grid-template-columns:1fr}
+  .eyebrow{display:none}
+  .uses li{grid-template-columns:5.6em minmax(0,1fr);gap:10px}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
