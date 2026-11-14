@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  qrding-vue:
+    build: .
+    container_name: qrding-vue
+    ports:
+      - "3311:80"
+    restart: unless-stopped

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>扣叮 QRding - HTML静态版</title>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui}
+.container{max-width:720px;margin:30px auto;padding:0 16px}
+.card{border:1px solid #e5e7eb;border-radius:8px;padding:20px;margin-bottom:16px}
+.form-item{margin:14px 0}
+label{display:block;margin-bottom:6px;font-weight:500}
+input,textarea,select{width:100%;padding:8px;border:1px solid #d1d5db;border-radius:6px}
+button{padding:9px 16px;background:#1677ff;color:#fff;border:none;border-radius:6px;cursor:pointer}
+.row{display:flex;gap:12px}
+.col{flex:1}
+.qr-preview{text-align:center;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>扣叮 QRding｜静态HTML版</h2>
+  <div class="card">
+    <div class="form-item">
+      <label>模板类型</label>
+      <select id="typeSel" onchange="changeTemplate()">
+        <option value="text">普通文本</option>
+        <option value="url">URL链接</option>
+        <option value="wifi">WiFi信息</option>
+        <option value="vcard">vCard联系人</option>
+      </select>
+    </div>
+
+    <div class="form-item" id="ctWrap">
+      <label>内容</label>
+      <textarea id="content" rows="3"></textarea>
+    </div>
+
+    <div id="wifiWrap" style="display:none">
+      <div class="form-item">
+        <label>WiFi名称</label>
+        <input id="wifiSsid"/>
+      </div>
+      <div class="form-item">
+        <label>WiFi密码</label>
+        <input id="wifiPwd"/>
+      </div>
+    </div>
+    <div id="vcardWrap" style="display:none">
+      <div class="form-item">
+        <label>姓名</label>
+        <input id="vcName"/>
+      </div>
+      <div class="form-item">
+        <label>电话</label>
+        <input id="vcTel"/>
+      </div>
+      <div class="form-item">
+        <label>邮箱</label>
+        <input id="vcEmail"/>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col form-item">
+        <label>尺寸 px</label>
+        <input id="qrSize" type="number" value="320"/>
+      </div>
+      <div class="col form-item">
+        <label>纠错级别</label>
+        <select id="levelSel">
+          <option value="L">L</option>
+          <option value="M" selected>M</option>
+          <option value="Q">Q</option>
+          <option value="H">H</option>
+        </select>
+      </div>
+      <div class="col form-item">
+        <label>前景色</label>
+        <input id="darkColor" type="color" value="#000000"/>
+      </div>
+      <div class="col form-item">
+        <label>背景色</label>
+        <input id="bgColor" type="color" value="#ffffff"/>
+      </div>
+    </div>
+
+    <div class="form-item">
+      <button onclick="genQr()">生成二维码</button>
+      <button onclick="downloadPng()">下载PNG</button>
+    </div>
+  </div>
+
+  <div class="card qr-preview">
+    <canvas id="canvas"></canvas>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById('canvas')
+let dataUrl = ''
+
+function changeTemplate(){
+  const t = document.getElementById('typeSel').value
+  document.getElementById('ctWrap').style.display = (t==='text'||t==='url')?'block':'none'
+  document.getElementById('wifiWrap').style.display = t==='wifi'?'block':'none'
+  document.getElementById('vcardWrap').style.display = t==='vcard'?'block':'none'
+}
+
+function buildText(){
+  const t = document.getElementById('typeSel').value
+  switch(t){
+    case 'text':
+    case 'url':
+      return document.getElementById('content').value.trim()
+    case 'wifi':
+      const ssid = document.getElementById('wifiSsid').value
+      const pwd = document.getElementById('wifiPwd').value
+      return `WIFI:S:${ssid};P:${pwd};;`
+    case 'vcard':
+      const name = document.getElementById('vcName').value
+      const tel = document.getElementById('vcTel').value
+      const email = document.getElementById('vcEmail').value
+return `BEGIN:VCARD
+VERSION:3.0
+N:${name}
+TEL:${tel}
+EMAIL:${email}
+END:VCARD`
+  }
+  return ''
+}
+
+async function genQr(){
+  const txt = buildText()
+  if(!txt) return alert('内容不能为空')
+  const opt = {
+    width: Number(document.getElementById('qrSize').value),
+    errorCorrectionLevel: document.getElementById('levelSel').value,
+    color:{
+      dark: document.getElementById('darkColor').value,
+      light: document.getElementById('bgColor').value
+    }
+  }
+  await QRCode.toCanvas(canvas, txt, opt)
+  dataUrl = canvas.toDataURL('image/png')
+}
+function downloadPng(){
+  if(!dataUrl) return alert('先生成二维码')
+  const a = document.createElement('a')
+  a.href = dataUrl
+  a.download = 'qrding.png'
+  a.click()
+}
+</script>
+</body>
+</html>
