@@ -3,8 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>码叮 QRding · 纯前端二维码工具，内容不出浏览器</title>
-<meta name="description" content="码叮 QRding 是纯前端、无后端的二维码生成工具：内容在本地编码、绘制、导出，断网可用，适合内网、NAS 与离线环境。">
+<title>码叮 QRding · 二维码生成器｜渐变美化、Logo、离线可用</title>
+<meta name="description" content="码叮 QRding 是纯前端二维码生成器：渐变填充、码点与码眼形状、中心 Logo、底部文字都能调，内容在本地编码绘制，零外部请求，断网也能用（内网 / NAS / 离线电脑）。">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="码叮 QRding">
+<meta name="theme-color" content="#eef0ea">
+<link rel="canonical" href="https://qrding.cn/">
+<link rel="alternate" hreflang="zh-CN" href="https://qrding.cn/">
+
+<!-- 社交分享卡片 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="码叮 QRding">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="码叮 QRding · 二维码生成器｜渐变美化、Logo、离线可用">
+<meta property="og:description" content="纯前端二维码生成器：渐变、码点码眼形状、Logo、底部文字；内容本地编码，零外部请求，断网可用。">
+<meta property="og:url" content="https://qrding.cn/">
+<meta property="og:image" content="https://qrding.cn/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="纸墨底色上写着「二维码，不必离开浏览器」，右侧是一张渐变圆点二维码">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="码叮 QRding · 二维码生成器｜渐变美化、Logo、离线可用">
+<meta name="twitter:description" content="纯前端二维码生成器：渐变、码点码眼形状、Logo、底部文字；内容本地编码，零外部请求，断网可用。">
+<meta name="twitter:image" content="https://qrding.cn/og.jpg">
+<meta name="twitter:image:alt" content="纸墨底色上写着「二维码，不必离开浏览器」，右侧是一张渐变圆点二维码">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://qrding.cn/#website",
+      "url": "https://qrding.cn/",
+      "name": "码叮 QRding",
+      "alternateName": "QRding",
+      "inLanguage": "zh-CN",
+      "description": "纯前端二维码生成器，支持渐变、码点码眼美化、Logo 与底部文字，断网可用。"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://qrding.cn/#app",
+      "name": "码叮 QRding 二维码生成器",
+      "url": "https://qrding.cn/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "任何有现代浏览器的设备",
+      "browserRequirements": "支持 Canvas 的现代浏览器，可完全离线运行",
+      "isAccessibleForFree": true,
+      "inLanguage": "zh-CN",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+      "featureList": [
+        "文本 / 网址 / Wi-Fi / 名片（vCard）四类模板",
+        "渐变填充、背景透明、码点与码眼形状、码点缩放、静区留白",
+        "中心 Logo 与底部文字",
+        "L/M/Q/H 四级纠错",
+        "导出 PNG 与 SVG，可复制到剪贴板",
+        "本地编码绘制，零外部请求，断网可用"
+      ],
+      "publisher": { "@id": "https://qrding.cn/#org" },
+      "isBasedOn": "https://github.com/liulixiang/qrding"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://qrding.cn/#org",
+      "name": "码叮 QRding",
+      "url": "https://qrding.cn/",
+      "logo": "https://qrding.cn/og.jpg",
+      "sameAs": ["https://github.com/liulixiang/qrding"]
+    }
+  ]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23eef0ea'/%3E%3Crect x='4' y='4' width='9' height='9' fill='%2312140f'/%3E%3Crect x='19' y='4' width='9' height='9' fill='%2312140f'/%3E%3Crect x='4' y='19' width='9' height='9' fill='%2312140f'/%3E%3Crect x='19' y='19' width='4' height='4' fill='%23a8342a'/%3E%3C/svg%3E">
 <style>
 :root{
@@ -318,7 +388,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
         </ul>
       </div>
       <div class="left-foot">
-        <span>单文件 187 KB</span>
+        <span>单文件 190 KB</span>
         <span>零外部请求</span>
         <span>MIT 开源</span>
       </div>
