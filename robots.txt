@@ -1,0 +1,7 @@
+# 码叮 QRding — 纯前端二维码工具（https://qrding.cn）
+# 全站可抓取；只有一个页面，无后台、无用户目录
+
+User-agent: *
+Allow: /
+
+Sitemap: https://qrding.cn/sitemap.xml
