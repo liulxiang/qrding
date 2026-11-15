@@ -124,6 +124,22 @@ a:hover{border-bottom-color:var(--ink)}
 .top nav a:hover{color:var(--brand);border-bottom:1px solid var(--brand)}
 .top nav .ghost{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);letter-spacing:.04em}
 .top nav .ghost:hover{color:var(--brand);border-bottom-color:var(--brand)}
+.top nav .vip{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 11px 6px 9px;border-radius:999px;
+  font-size:13px;font-weight:600;letter-spacing:.01em;
+  color:#2b2000;background:linear-gradient(180deg,#ffe089 0%,#f6b93b 100%);
+  border:1px solid #dfa62d;border-bottom-color:#cf971f;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 1px 2px rgba(160,105,0,.16);
+}
+.top nav .vip:hover{
+  color:#1b1300;background:linear-gradient(180deg,#ffd774 0%,#efa61f 100%);
+  border-bottom:1px solid #cf971f;
+}
+.top nav .vip b{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;font-weight:700;
+  background:#2b2000;color:#ffd166;padding:1px 5px;border-radius:3px;
+}
 
 /* ── Hero ───────────────────────────── */
 .hero{padding-top:64px;padding-bottom:8px}
@@ -349,6 +365,16 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
   .style-row{grid-template-columns:1fr}
   .eyebrow{display:none}
   .uses li{grid-template-columns:5.6em minmax(0,1fr);gap:10px}
+  .top .bar{height:auto;padding:10px 0;gap:10px}
+  .top nav{gap:11px;font-size:13px}
+  .top nav a{white-space:nowrap;flex:none}
+  .top nav a:nth-child(4){display:none}
+  .brand .cn,.brand .en{white-space:nowrap}
+  .brand img{width:23px}
+  .brand .en{display:none}
+  .top nav .vip{padding:5px 9px 5px 7px;font-size:12px;gap:5px}
+  .top nav .vip .vip-text{display:none}
+  .top nav .vip b{font-size:10px}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
@@ -369,6 +395,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
       <a href="#how">原理</a>
       <a href="#editions">两个版本</a>
       <a href="#deploy">部署</a>
+      <a class="vip" href="https://www.mading.cc" target="_blank" rel="noopener" title="码叮 SaaS 高级版 · www.mading.cc"><b>VIP</b><span class="vip-text">SaaS 高级版</span></a>
       <a class="ghost" href="https://github.com/liulxiang/qrding" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </div>
@@ -408,7 +435,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
         </ul>
       </div>
       <div class="left-foot">
-        <span>单文件 219 KB</span>
+        <span>单文件 220 KB</span>
         <span>零外部请求</span>
         <span>MIT 开源</span>
       </div>
